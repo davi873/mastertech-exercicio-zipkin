@@ -1,0 +1,19 @@
+
+server:
+  port: 9000
+
+spring:
+  application:
+    name: Zuul
+
+zuul:
+  routes:
+    consulta:
+      stripPrefix: false
+      path: /endereco/**
+      idServer: consulta
+
+    cep:
+      stripPrefix: false
+      path: /cep/**
+      idServer: cep
